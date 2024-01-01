@@ -7,6 +7,35 @@ import "./Main.css";
 import americanfoorball from "./image/americanfootball.png";
 import basketball from "./image/basketball.png";
 
+// CSS
+// ในกรณีที่ขนาดใหญ่กว่า 768px
+// [container]
+//  [container-content1]
+//    [container-content1-1] <= สำหรับข้อมูลชุดของ Athletes
+//      [header-1] <= Header Athletes   *** ก่อนหน้านี้ใช้ชื่อว่า row1
+//      [detail-1-1]
+//        [row2] <= Connection
+//        [row3] <= Collaboration
+//        [row4] <= Growth
+//    [container-content1-2] <= สำหรับข้อมูลชุดของ Players
+//        [header-2] <= Header Players  *** ก่อนหน้านี้ใช้ชื่อว่า row5
+//      [detail-2-1]
+//        [row6] <= Connection
+//        [row7] <= Collaboration
+//        [row8] <= Growth
+//  [container-content2] <= แสดงรูปในกรณีที่มีขนาดหน้าจอมากกว่า 768px
+//    [image-1]
+//    [image-2]
+
+// ในกรณีที่ขนาดเล็กกว่า 768px
+// [container]
+//  [container-content1]
+//    [container-content1-1] <= สำหรับข้อมูลชุดของ Athletes
+//      [header-1] <= Header
+//      [detail-1-2]
+//        [mid-space]  <= space ตรงกลางสำหรับใส่รูป
+//        [slide-container] <= สำหรับ Swiper
+
 const content = [
   {
     header: "ATHLETS",
@@ -72,7 +101,7 @@ function Content1() {
   return (
     <div>
       <div className="container-content1-1">
-        <div className="row1">
+        <div className="header-1">
           <div className="column1-1"></div>
           <div className="column1-2">
             <div className="header">{content[0].header}</div>
@@ -212,22 +241,18 @@ function Content1() {
 
 function Content2() {
   return (
-    <div className="container-content2-con">
-      <div className="container-content2-1">
-        <div className="image-1">
-          <img
-            src={americanfoorball}
-            alt="americanfoorball"
-            // width="650"
-            // max-height="1080px"
-          />
-        </div>
+    // <div className="container-content2-con">
+    //   <div className="container-content2-1">
+    <div>
+      <div className="image-1">
+        <img src={americanfoorball} alt="americanfoorball" />
       </div>
-      <div className="container-content2-2">
-        <div className="image-2">
-          <img src={basketball} alt="basketball" />
-        </div>
+
+      {/* <div className="container-content2-2"> */}
+      <div className="image-2">
+        <img src={basketball} alt="basketball" />
       </div>
+      {/* </div> */}
     </div>
   );
 }

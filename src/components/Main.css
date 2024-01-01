@@ -111,7 +111,7 @@
   display: none;
 }
 /*//////////////// Box 1 ////////////////*/
-.row1 {
+.header-1 {
   display: flex;
   background-color: white;
 }
@@ -421,8 +421,8 @@
   }
 
   .image-2 {
-    margin-top: -10%;
-    margin-left: 31%;
+    margin-top: -7%;
+    margin-left: 33%;
   }
   .image-2 img {
     width: 530px;
@@ -438,7 +438,7 @@
   .container-content2 {
     display: none;
   }
-  .row1 {
+  .header-1 {
     display: block;
   }
   .header-2 {
@@ -585,7 +585,7 @@
   .container-content2 {
     display: none;
   }
-  .row1 {
+  .header-1 {
     display: block;
   }
   .header-2 {
